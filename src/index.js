@@ -45,9 +45,9 @@ export default {
 		// Return the last segment in the array
 		const resource = segments[segments.length - 1];
 
-		if (resource != null && resource != "" ) {
+		if (resource != null && resource.length == 2 ) {
 			/* get flag image from R2 */
-			const fileName = resource.toLowerCase();
+			const fileName = resource.toLowerCase() + ".png";
 			// request.cf.country.toLowerCase() + ".png"
 			const object = await env.countryflags.get(fileName);
 
@@ -110,7 +110,7 @@ export default {
 			<body>
 			  <h1>National Flag Demo</h1>
 			  <p>${auth_email} authenticated at ${auth_iat}, expire at ${auth_exp}</p>
-			  Access from <a href="./${request.cf.country}.png">${request.cf.country}</a>.</p>
+			  Access from <a href="./${request.cf.country}">${request.cf.country}</a>.</p>
 			  <p>Current time is ${current_time}</p>
 			  ${html_content}
 			  <h1>CF_Authorization / Cookie</h1>
