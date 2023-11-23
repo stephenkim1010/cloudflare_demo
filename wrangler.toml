@@ -1,0 +1,8 @@
+name = "secure"
+main = "src/index.js"
+compatibility_date = "2023-11-22"
+account_id = "a0eaccb92bae36a4717d916970a566dc"
+
+[[r2_buckets]]
+binding = 'countryflags' # <~ valid JavaScript variable name
+bucket_name = 'flags'
